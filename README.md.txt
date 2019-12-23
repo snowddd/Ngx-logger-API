@@ -1,0 +1,1 @@
+practice to use node.js and angular to save log (use ngx-logger)
