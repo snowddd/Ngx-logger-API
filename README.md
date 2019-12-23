@@ -6,39 +6,39 @@
 
 ## 2. app.component.ts 
 
-import {NGXLogger} from 'ngx-logger';
-constructor(private logger: NGXLogger);
+#### import {NGXLogger} from 'ngx-logger';
+#### constructor(private logger: NGXLogger);
 
-use this.logger.debug('your debug log message')
-    this.logger.info('your info log message')
-    this.logger.log('your log message')
-    this.logger.warn('your warn log message')
-    this.logger.error('your error log message')
+#### use this.logger.debug('your debug log message')
+####    this.logger.info('your info log message')
+####    this.logger.log('your log message')
+####    this.logger.warn('your warn log message')
+####    this.logger.error('your error log message')
     
 
 ## 3. /environments/enviroment.ts
 
-import {NgxLoggerLevel} from 'ngx-logger';
+#### import {NgxLoggerLevel} from 'ngx-logger';
 
-export const environment = {
-...,
-logging:{
-level: NgxLoggerLevel.DEBUG,
-serverLogLevel: NgxLoggerLevel.DEBUG,
-serverLoggingUrl:'set your API url' 
-  }
-};
+#### export const environment = {
+#### ...,
+#### logging:{
+#### level: NgxLoggerLevel.DEBUG,
+#### serverLogLevel: NgxLoggerLevel.DEBUG,
+#### serverLoggingUrl:'set your API url' 
+####  }
+#### };
 
 
 
 ## 4. app.module.ts
 
-import {LoggerModule} from 'ngx-logger';
+#### import {LoggerModule} from 'ngx-logger';
 ...,
-import: [
-...,
-LoggerModule.forRoot(environment.logging)
-]
+#### import: [
+#### ...,
+#### LoggerModule.forRoot(environment.logging)
+#### ]
 
 
 ## 5. when you send a NGX-logger your API will get log in request
