@@ -27,7 +27,6 @@ app.use(bodyParser.json());
 app.post('/testlogging', function (req, res, next) {
   console.log('POST ' + apiDomain + '/testlogging');
   console.log(req);
-  if (req.body.length) {
     fs.appendFile(`${'log' + '/' + new Date().getFullYear() + '_' + (new Date().getMonth() + 1) + '_' + new Date().getDate()}.txt`, `${JSON.stringify(req.body) + '\n'}`, function (err) {
       if (err)
         console.log(err);
@@ -35,10 +34,7 @@ app.post('/testlogging', function (req, res, next) {
         console.log('Append operation complete.');
     });
     res.json(returnCode);
-  } else {
-    res.json(errorCode);
-  }
-
+  
 });
 
 app.listen(5000); //dedault port

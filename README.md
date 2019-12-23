@@ -13,7 +13,9 @@ use this.logger.debug('your debug log message')
     this.logger.warn('your warn log message')
     this.logger.error('your error log message')
     
+
 3. /environments/enviroment.ts
+
 import {NgxLoggerLevel} from 'ngx-logger';
 
 export const environment = {
@@ -28,12 +30,14 @@ serverLoggingUrl:'set your API url'
 
 
 4. app.module.ts
+
 import {LoggerModule} from 'ngx-logger';
 ...,
 import: [
 ...,
 LoggerModule.forRoot(environment.logging)
 ]
+
 
 5. when you send a NGX-logger your API will get log in request
 
