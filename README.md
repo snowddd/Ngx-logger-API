@@ -1,8 +1,10 @@
-practice to use node.js and angular to save log (use ngx-logger)
+#practice to use node.js and angular to save log (use ngx-logger)
 
-1. npm i ngx-logger (need know your ngx-logger patch Configuration Angular patch)
 
-2. app.component.ts 
+##1. npm i ngx-logger (need know your ngx-logger patch Configuration Angular patch)
+
+
+##2. app.component.ts 
 
 import {NGXLogger} from 'ngx-logger';
 constructor(private logger: NGXLogger);
@@ -14,7 +16,7 @@ use this.logger.debug('your debug log message')
     this.logger.error('your error log message')
     
 
-3. /environments/enviroment.ts
+##3. /environments/enviroment.ts
 
 import {NgxLoggerLevel} from 'ngx-logger';
 
@@ -29,7 +31,7 @@ serverLoggingUrl:'set your API url'
 
 
 
-4. app.module.ts
+##4. app.module.ts
 
 import {LoggerModule} from 'ngx-logger';
 ...,
@@ -39,7 +41,7 @@ LoggerModule.forRoot(environment.logging)
 ]
 
 
-5. when you send a NGX-logger your API will get log in request
+##5. when you send a NGX-logger your API will get log in request
 
 E.g
 
